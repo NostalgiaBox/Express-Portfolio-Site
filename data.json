@@ -1,0 +1,50 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "project_name": "Inspirational Quote Generator",
+            "description": "A very basic vanilla JS app that cycles through inspirational quotes",
+            "technologies": ["Javascript", "CSS", "HTML"],
+            "live_link": "",
+            "github_link": "https://github.com/NostalgiaBox/Inspirational-Quote-Generator",
+            "image_urls": ["1"]
+        },
+        {
+            "id": "2",
+            "project_name": "Search and pagination",
+            "description": "An HTML page that uses JavaScript to break into pages.  It also uses a search function.",
+            "technologies": ["Javascript", "CSS", "HTML"],
+            "live_link": "",
+            "github_link": "https://github.com/NostalgiaBox/Search-and-Pagination",
+            "image_urls": ["2","3"]
+        },
+        {
+            "id": "3",
+            "project_name": "Interactive JS Form",
+            "description": "This is the front-end for a submission form.  It selectively displays elements and uses RegEx to verify fields",
+            "technologies": ["Javascript", "CSS", "HTML, RegEx"],
+            "live_link": "",
+            "github_link": "https://github.com/NostalgiaBox/Interactive-JS-Form",
+            "image_urls": ["4"]
+        },
+        {
+            "id": "4",
+            "project_name": "Hangman Game",
+            "description": "A fun little hangman game with only a few phrases currently.  It keeps track of score, responds to button presses, and also keystrokes.",
+            "technologies": ["Javascript", "CSS", "HTML, RegEx"],
+            "live_link": "",
+            "github_link": "https://github.com/NostalgiaBox/OOP_Hangman_Game",
+            "image_urls": ["5","6","7"]
+        },
+        {
+            "id": "5",
+            "project_name": "Public Request API",
+            "description": "A JavaScript page that pulls a list of users from an external API.  Allows for drilling down into details and searching based on names.",
+            "technologies": ["Javascript", "CSS", "HTML, APIs, RegEx"],
+            "live_link": "",
+            "github_link": "https://github.com/NostalgiaBox/JS-Public-API-Request",
+            "image_urls": ["8"]
+        }
+    ]
+
+}
