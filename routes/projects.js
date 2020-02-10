@@ -1,12 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const { projects } = require('../data.json');
-const { cards } = data;
+//const { cards } = data;
 
-router.get('/:id', (req, res) => {
-    
+router.get('/:id', (req, res, next) => {
     try {
-        const project = projects[id];
+        const { id } = req.params;
+        const project = projects[id - 1];
+        if (project === undefined) {
+            let error = new Error('404');
+            error.status = 404;
+            error.message = "The page you tried to navigate to is nto found.  Pleaseuse a valid project number"
+            throw error
+        }
         const projectName = project.project_name;
         const description = project.description;
         const technologies = project.technologies;
@@ -16,21 +22,17 @@ router.get('/:id', (req, res) => {
 
         const projectData = {projectName, description, technologies, live_link, github_link, image_urls};
         
-        if (project === undefined) {
-            throw 404;
-        }
-        res.render('project', projectData);
+        
+        res.render('project', {projectData});
     }
     catch(err) {
         console.log('caught error ' + err);
-        if (err === 404) {
-            res.sendStatus(404);
-        }
+        next(err);
     }
 });
 
 router.get('/', (req, res) => {
-    const tempID = Math.floor(Math.random() * cards.length)
-    res.redirect(`/cards/${tempID}?side=question`)
+    const tempID = Math.floor(Math.random() * projects.length)
+    res.redirect(`/projects/${tempID}`)
 });
 module.exports = router;

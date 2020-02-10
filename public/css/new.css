@@ -1,0 +1,14 @@
+h1,h2,h3,h4,h5,p{
+    font-family: 'Calibri', sans-serif;
+  }
+
+  body{
+      background-color: #E9E8E8;
+  }
+
+  div .cell {
+      transition: box-shadow 0.5s;
+  }
+  div .cell:hover {
+      box-shadow: 3px 3px grey;
+  }

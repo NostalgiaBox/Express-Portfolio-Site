@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= error.message
+    h2 Error Status Code: #{error.status}
+    p Something went wrong, please try to navigate to another page.
+    p= error.stack
